@@ -1,0 +1,249 @@
+{
+  "features_to_load": {
+    "persons": [
+      "person_id",
+      "household_id",
+      "position_in_hh",
+      "position_in_bus",
+      "type_5",
+      "income",
+      "sex",
+      "dbirth",
+      "education",
+      "position_in_edu",
+      "nation",
+      "mobility",
+      "car_ownership",
+      "car_company",
+      "language",
+      "type_1",
+      "type_2",
+      "type_6"
+
+    ],
+    "households": [
+      "household_id",
+      "location_id",
+      "type_3",
+      "xcoord",
+      "ycoord",
+      "hcoord_type"
+    ],
+    "zones": [
+      "zone_id",
+      "kt_id",
+      "kt_name",
+      "mun_name"
+    ],
+    "businesses": [
+      "business_id",
+      "location_id",
+      "type_1",
+      "type_2",
+      "type_3",
+      "dfoundation",
+      "nr_of_jobs",
+      "cb_nr_of_jobs",
+      "fte",
+      "cb_fte",
+      "nr_of_cars",
+      "school_type",
+      "xcoord",
+      "ycoord",
+      "bcoord_type"
+    ]
+  },
+  "features_to_rename": {
+    "persons": {
+      "type_1": "business_sector",
+      "type_2": "level_of_employment",
+      "type_5": "corrected_position_in_bus",
+      "type_6": "corrected_level_of_employment"
+    },
+    "households": {
+      "type_3": "household_model",
+      "location_id": "zone_id"
+    },
+    "businesses": {
+      "type_1": "sector",
+      "type_2": "legal_form",
+      "type_3": "noga_code",
+      "nr_of_jobs": "jobs_endo",
+      "cb_nr_of_jobs": "jobs_exo",
+      "fte": "fte_endo",
+      "cb_fte": "fte_exo",
+      "location_id": "zone_id"
+    }
+  },
+  "boolean_features": {
+    "persons": [
+      "car_ownership",
+      "car_company"
+    ]
+  },
+  "date_features": {
+    "persons": {
+      "dbirth": "%d-%m-%Y"
+      },
+    "businesses": {
+      "dfoundation": "%d-%m-%Y"
+      }
+  },
+  "categorical_keys": {
+    "persons": {
+      "position_in_hh": {
+        "0": "other",
+        "3": "child",
+        "5": "partner",
+        "NaN": "head"
+      },
+      "position_in_bus": {
+        "0": "unemployed",
+        "1": "ceo",
+        "2": "employee",
+        "3": "apprentice",
+        "11": "bus_management",
+        "12": "management",
+        "20": "employee",
+        "NaN": "null"
+      },
+      "corrected_position_in_bus": {
+        "0": "unemployed",
+        "1": "ceo",
+        "2": "employee",
+        "3": "apprentice",
+        "11": "bus_management",
+        "12": "management",
+        "20": "employee",
+        "NaN": "null"
+      },
+      "education": {
+        "1": "no_edu",
+        "2": "secondary",
+        "3": "higher_edu",
+        "4": "uni",
+        "NaN": "null"
+      },
+      "position_in_edu": {
+        "10": "pupil",
+        "20": "student",
+        "0": "null",
+        "NaN": "null"
+      },
+      "nation": {
+        "0": "swiss",
+        "1": "germany/austria/lichtenstein",
+        "2": "italy/vatican",
+        "3": "france/monaco/san_marino",
+        "4": "nw-europe",
+        "5": "sw-europe",
+        "6": "so-europe",
+        "7": "o-europe",
+        "8": "africa",
+        "9": "asia",
+        "10": "america/oceania/others",
+        "99": "null",
+        "NaN": "null"
+      },
+      "language": {
+        "1": "german",
+        "2": "french",
+        "3": "italian",
+        "4": "romansh",
+        "5": "other",
+        "NaN": "null"
+      },
+      "sex": {
+        "0": "F",
+        "1": "M"
+      },
+      "business_sector": {
+        "0": "null",
+        "1": "agriculture",
+        "2": "production",
+        "3": "wholesale",
+        "4": "retail",
+        "5": "gastronomy",
+        "6": "finance",
+        "7": "services fC",
+        "8": "other services",
+        "9": "other",
+        "10": "non movers",
+        "99": "null",
+        "NaN": "null"
+      },
+      "mobility": {
+        "0": "nothing",
+        "1": "ht",
+        "2": "ga",
+        "5": "va",
+        "6": "va & ht",
+        "10": "car",
+        "11": "car & ht",
+        "12": "car & ga",
+        "15": "car & va",
+        "16": "car & va & ht",
+        "NaN": "null"
+      }
+    },
+    "households": {
+      "household_model": {
+        "1": "single",
+        "2": "pair",
+        "3": "pair_with_children",
+		"10": "var_not_defined",
+        "12": "pair",
+        "13": "pair_with_children",
+        "0": "other",
+        "NaN": "null"
+      },
+      "hcoord_type": {
+        "0": "not_available",
+        "1": "with_original_coordinates",
+        "2": "no_address",
+        "10": "new_for_not_available",
+        "12": "new_for_no_address"
+      }
+    },
+    "businesses": {
+      "sector": {
+        "1": "agriculture",
+        "2": "production",
+        "3": "wholesale",
+        "4": "retail",
+        "5": "gastronomy",
+        "6": "finance",
+        "7": "services fC",
+        "8": "other services",
+        "9": "other",
+        "10": "non movers",
+        "0": "null",
+        "99": "null",
+        "NaN": "null"
+      },
+      "legal_form": {
+        "1": "partnerships",
+        "2": "companies",
+        "3": "cooperatives",
+        "4": "holding",
+        "5": "branch_establishment",
+        "6": "other"
+      },
+      "school_type": {
+        "0": "no_school",
+        "1": "primary",
+        "2": "secondary",
+        "3": "other_higher_education",
+        "4": "university",
+        "99": "other"
+      },
+      "bcoord_type": {
+        "0": "not_available",
+        "1": "with_original_coordinates",
+        "2": "no_address",
+        "10": "new_for_not_available",
+        "12": "new_for_no_address"
+      }
+    }
+  }
+}

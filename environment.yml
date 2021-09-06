@@ -1,0 +1,11 @@
+name: synpop
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.7
+  - pip=20.2
+  - geopandas
+
+  - pip:
+    - -r file:requirements.txt
