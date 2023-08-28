@@ -45,14 +45,7 @@ conda env create -f environment.yml
 
 The project may also be installed directly using pip:
 
-`pip install mobi-synpop`
-
-Or if mobi-synpop isn't available, install directly from git with:
-
 `pip install git+https://github.com/SchweizerischeBundesbahnen/SynPopToolbox.git`
-
-If dependencies are missing in your current environment, 
-include all dependencies by appending `[full]` to the repository name, such as `mobi-synpop[full]`.
 
 ## Functionality
 
