@@ -1,0 +1,17 @@
+format: jb-book
+parts:
+- caption: SynPop Structure
+  chapters:
+  - file: population
+  - file: age_structure
+  - file: households
+  - file: businesses
+- caption: Person Attributes
+  chapters:
+  - file: overview
+  - file: nationality
+  - file: level_of_employment
+  - file: education
+  - file: job_rank
+  - file: mobility_tools
+root: intro

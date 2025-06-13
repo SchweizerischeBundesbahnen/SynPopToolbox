@@ -1,0 +1,18 @@
+author: MOBi Team
+execute:
+  allow_errors: true
+  execute_notebooks: cache
+  stderr_output: show
+  timeout: 600
+launch_buttons:
+  binderhub_url: ''
+logo: simba-mobi-logo.png
+synpop_report_config:
+  codebase: C:\devsbb\code\mobi-synpop\src
+  fitting_output: C:\devsbb\code\mobi-synpop\tests\assets\report_synpops\allzones_2040.sqlite\fitting_output
+  reference_synpop: C:\devsbb\code\mobi-synpop\tests\assets\report_synpops\allzones_2017.sqlite
+  reference_year: 2017
+  target_synpop: C:\devsbb\code\mobi-synpop\tests\assets\report_synpops\allzones_2040.sqlite
+  target_year: 2040
+  validate: True
+title: SynPop Report

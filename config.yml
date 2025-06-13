@@ -1,0 +1,23 @@
+### Actions to Run ###
+run:
+  - pipeline.preprocess
+  - pipeline.anonymize
+  - pipeline.fit_marginals
+  - pipeline.write_synpop
+  - pipeline.generate_report
+
+### Config parameters
+config:
+  input_falc_folder: path/to/falc/folder
+  output_synpop_folder: synpop
+  year: 2040
+  year_reference: 2017
+  reference_synpop_path: path/to/preprocessed/feather/synpop
+  run_anonymization: false
+  run_fitting: true
+  fitting_tables_path: path/to/fitting/targets/excel
+  blurring_target: households
+  blurring_hh_min_size_threshold: 3
+
+# Folder where the pipeline cache is stored
+working_directory: pipeline_cache

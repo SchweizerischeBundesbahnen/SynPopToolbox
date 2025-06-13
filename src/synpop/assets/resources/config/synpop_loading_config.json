@@ -1,0 +1,151 @@
+{
+  "features_to_load": {
+    "persons": [
+      "person_id",
+      "household_id",
+      "position_in_bus",
+      "dbirth",
+      "position_in_edu",
+      "education",
+      "nation",
+      "language",
+      "empl_fte"
+    ],
+    "households": [
+      "household_id",
+      "location_id",
+      "hflag",
+      "xcoord",
+      "ycoord"
+    ],
+    "businesses": [
+      "business_id",
+      "location_id",
+      "bSector",
+      "bclassification",
+      "school_type",
+      "nr_of_jobs",
+      "cb_nr_of_jobs",
+      "fte",
+      "cb_fte",
+      "xcoord",
+      "ycoord"
+    ]
+  },
+  "features_to_rename": {
+    "persons": {
+      "empl_fte": "level_of_employment",
+      "education": "highest_education"
+    },
+    "households": {
+      "location_id": "zone_id",
+      "hflag": "collective_hh_type"
+    },
+    "businesses": {
+      "location_id": "zone_id",
+      "bSector": "sector",
+      "bclassification": "noga_code",
+      "nr_of_jobs": "jobs_endo",
+      "cb_nr_of_jobs": "jobs_exo",
+      "fte": "fte_endo",
+      "cb_fte": "fte_exo"
+    }
+  },
+  "date_features": {
+    "persons": {
+      "dbirth": "%d-%m-%Y"
+      }
+  },
+  "index_column": {
+    "persons": "person_id",
+    "businesses": "business_id",
+    "households": "household_id"
+  },
+  "categorical_keys": {
+    "persons": {
+      "position_in_bus": {
+        "0": "unemployed",
+        "1": "ceo",
+        "2": "employee",
+        "3": "apprentice",
+        "11": "bus_management",
+        "12": "management",
+        "20": "employee",
+        "NaN": "null"
+      },
+      "position_in_edu": {
+        "10": "pupil",
+        "20": "student",
+        "30": "apprentice",
+        "0": "null",
+        "NaN": "null"
+      },
+      "nation": {
+        "0": "swiss",
+        "1": "germany/austria/lichtenstein",
+        "2": "italy/vatican",
+        "3": "france/monaco/san_marino",
+        "4": "nw-europe",
+        "5": "sw-europe",
+        "6": "so-europe",
+        "7": "o-europe",
+        "8": "africa",
+        "9": "asia",
+        "10": "america/oceania/others",
+        "99": "null",
+        "NaN": "null"
+      },
+      "language": {
+        "1": "german",
+        "2": "french",
+        "3": "italian",
+        "4": "romansh",
+        "5": "other",
+        "NaN": "null"
+      },
+      "highest_education": {
+        "1": "primary",
+        "2": "secondary",
+        "3": "tertiary_college",
+        "4": "tertiary_university"
+      }
+    },
+    "households": {
+      "collective_hh_type": {
+        "NaN": "null",
+        "10": "retirement_home",
+        "20": "boarding_school",
+		"30": "other"
+      }
+    },
+    "businesses": {
+      "sector": {
+        "1": "agriculture",
+        "2": "production",
+        "3": "wholesale",
+        "4": "retail",
+        "5": "gastronomy",
+        "6": "finance",
+        "7": "services fC",
+        "8": "other services",
+        "9": "other",
+        "10": "non movers",
+        "0": "null",
+        "99": "null",
+        "NaN": "null"
+      },
+      "school_type": {
+        "0": "no_school",
+        "11": "kindergarten",
+        "12": "primary",
+        "13": "secondary_1",
+        "2": "secondary_2",
+        "31": "univ_applied_sciences",
+        "32": "higher_technical_school",
+        "4": "university",
+        "5": "professional_school",
+        "99": "other"
+      }
+    }
+  }
+}
